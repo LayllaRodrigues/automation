@@ -35,11 +35,19 @@ describe 'Cotação auto por km -John Single' do
         #O veiculo esta em nome de
 
         find(:xpath, '//*[@id="root"]/div[2]/div/div[9]/div[6]/div/div/div/div').click
-        find(:xpath, '//*[@id="menu-"]/div[3]/ul/li[1]').click.set 'pessoa fisica'
+        find(:xpath, '//*[@id="menu-"]/div[3]/ul/li[1]').click.set 'Pessoa Física'
 
-        # find(:xpath, '//*[@id="vehicleOwnershipStatus"]').click.set 'Pessoa Física'
-        sleep 10
+        # minha residencia fica no cep
 
+        find(:xpath, '//*[@id="root"]/div[2]/div/div[13]/div[2]/div/div[2]/div/input').set "04538133"
+
+        find(:id, 'insuredPersonAddressNeighborhood').click
+        
+        #numberhouse
+
+        find(:xpath, '//*[@id="insuredPersonAddressNumber"]').set "98"
+
+        sleep 5
 
 
 
