@@ -10,6 +10,8 @@ describe 'Cotação auto por km -John Single' do
     it 'preenchimento de lead' do
 
         fill_in 'insuredPersonName' , with: 'John John'
+
+
         find(:xpath, '//*[@id="root"]/div[2]/div/div[4]/div/div[2]/div/input').set"123.456.752-09"
         fill_in 'email' , with: 'laylla@youse.com.br'
         find(:xpath, '//*[@id="root"]/div[2]/div/div[6]/div/div[2]/div/input').set"11988776655"
@@ -47,12 +49,39 @@ describe 'Cotação auto por km -John Single' do
 
         find(:xpath, '//*[@id="insuredPersonAddressNumber"]').set "98"
 
+        #Quer receber noticias sobre a youse?
+
+        find(:xpath, '//*[@id="root"]/div[2]/div/div[15]/div/div[2]/div/label[2]/span[1]').click
+
+        #botton continuar
+
+        find(:xpath, '//*[@id="root"]/div[2]/div/div[16]/div/div[2]/span/div/button').click
+
         sleep 5
 
+        #Escolha de planos
+
+        find(:xpath, '//*[@id="root"]/div[2]/div[3]/div/div[1]/div[3]/div[4]/span/button').click
+
+        sleep 5
+
+        # data
+
+        # find(:xpath, '//*[@id="component-container"]/div/div/div[2]/div[1]/div[2]/div[1]/label/div/span').set '0124'
+     
+        # find(:xpath, '//*[@id="component-container"]/div/div/div[2]/div[1]/div[2]/div[1]/label/div').click.set '0124'
+
+        # card
+
+        find(:xpath, '//*[@id="component-container"]/div/div/div[2]/div[1]/div[1]/label').click.set ('0124').to_i
+
+        # find(:xpath, '//*[@id="component-container"]/div/div/div[2]/div[1]/div[1]/label/div').click.set '4111 1111 1111 1111'
+
+        find(:xpath, '//*[@id="component-container"]/div/div/div[2]/div[1]/div[1]/label/div/span[1]').set ('4111 1111 1111 1111').to_i
+        # find(:xpath, '').click.set 
 
 
-    end
-        
+    end    
 
 end
 
