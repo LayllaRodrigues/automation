@@ -20,4 +20,5 @@ end
 
 Capybara.configure do |config|
   config.default_driver = :selenium_chrome
+  config.default_max_wait_time = 10  #{substitui sleep - o capybara espera até 10sec pra achar o elemento}
 end
